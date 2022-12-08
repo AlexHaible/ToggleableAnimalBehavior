@@ -56,7 +56,7 @@ namespace ToggleableAnimalBehavior {
                 throw new ModLoadException("Mod must be loaded on the main menu");
             }
             started = true;
-            (harmony = new Harmony("com.aidanamite.FullRecycling")).PatchAll();
+            (harmony = new Harmony("com.Sauravisus.ToggleableAnimalBehavior")).PatchAll();
             Log("Mod has been loaded!");
         }
 
