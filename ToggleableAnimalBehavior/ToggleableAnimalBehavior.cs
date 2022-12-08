@@ -78,25 +78,6 @@ namespace ToggleableAnimalBehavior {
             CanUnload = true;
         }
 
-        public static void LogTree(Transform transform)
-        {
-            Debug.Log(GetLogTree(transform));
-        }
-
-        public static string GetLogTree(Transform transform, string prefix = " -", string step = "--")
-        {
-            string str = "\n" + prefix + transform.name;
-            var c = transform.GetComponents<Component>();
-            if (c.Length > 0)
-                str += $": {c.Join(x => x.GetType().FullName)}";
-            var r = transform.GetComponent<RectTransform>();
-            if (r)
-                str += $"\n{"".PadLeft(prefix.Length, ' ')}rect:[{r.rect.x},{r.rect.y},{r.rect.width},{r.rect.height}]\n{"".PadLeft(prefix.Length, ' ')}anchor:[{r.anchorMin.x},{r.anchorMin.y},{r.anchorMax.x},{r.anchorMax.y}]\n{"".PadLeft(prefix.Length, ' ')}offset:[{r.offsetMin.x},{r.offsetMin.y},{r.offsetMax.x},{r.offsetMax.y}]";
-            foreach (Transform sub in transform)
-                str += GetLogTree(sub, prefix + step);
-            return str;
-        }
-
         public void ExtraSettingsAPI_Load() => ExtraSettingsAPI_SettingsClose();
         public void ExtraSettingsAPI_SettingsClose()
         {
