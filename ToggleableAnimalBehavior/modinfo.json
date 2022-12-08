@@ -1,0 +1,129 @@
+{
+  "name": "Toggleable Animal Behavior",
+  "author": "Sauravisus",
+  "description": "Allows the users to set the behavior of all animals individually, as well as how often the shark attacks the raft, and if the seagulls attack crops.",
+  "version": "1.0",
+  "license": "GNU AGPLv3",
+  "icon": "icon.png",
+  "banner": "banner.png",
+  "gameVersion": "1.0",
+  "requiredByAllPlayers": true,
+  "updateUrl": "https://www.raftmodding.com/api/v1/mods/YOUR-MOD-SLUG-HERE/version.txt",
+  "isModPermanent": false,
+  "excludedFiles": [],
+  "modSettings": [
+    {
+      "type": "checkbox",
+      "name": "sharkIsTame",
+      "text": "Is shark tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "input",
+      "name": "sharkAtkMulti",
+      "text": "Shark attack frequency (0 for none)",
+      "default": "1.0",
+      "mode": "DecimalNumber",
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "sharkNoAttacksRaft",
+      "text": "Does shark not attack the raft?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "seagullIsTame",
+      "text": "Is seagull tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "seagullNoAtksCrops",
+      "text": "Does seagull not attack crops?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "stonebirdIsTame",
+      "text": "Is screecher tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "boarIsTame",
+      "text": "Is boar tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "butlerBotIsTame",
+      "text": "Is butler bot tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "bearIsTame",
+      "text": "Is bear tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "anglerfishIsTame",
+      "text": "Is anglerfish tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "hyenaIsTame",
+      "text": "Is hyena tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "pigIsTame",
+      "text": "Is mudhog tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "pufferfishIsTame",
+      "text": "Is pufferfish tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "ratIsTame",
+      "text": "Is lurker tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "utopiaBossIsTame",
+      "text": "Is alpha tame?",
+      "default": false,
+      "access": "both"
+    },
+    {
+      "type": "checkbox",
+      "name": "varunaBossIsTame",
+      "text": "Is rhino shark tame?",
+      "default": false,
+      "access": "both"
+    }
+  ]
+}
