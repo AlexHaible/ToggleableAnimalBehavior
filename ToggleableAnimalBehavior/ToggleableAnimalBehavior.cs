@@ -102,7 +102,7 @@ namespace ToggleableAnimalBehavior {
             GameModeValueManager.GetCurrentGameModeValue().sharkVariables.isTame = sharkIsTame;
             GameModeValueManager.GetCurrentGameModeValue().sharkVariables.attackRateMultiplier = sharkAtkMultiFloat;
             GameModeValueManager.GetCurrentGameModeValue().seagullVariables.isTame = seagullIsTame;
-            GameModeValueManager.GetCurrentGameModeValue().seagullVariables.attacksCrops = seagullNoAtksCrops;
+            GameModeValueManager.GetCurrentGameModeValue().seagullVariables.attacksCrops = !seagullNoAtksCrops;
             GameModeValueManager.GetCurrentGameModeValue().stonebirdVariables.isTame = stonebirdIsTame;
             GameModeValueManager.GetCurrentGameModeValue().boarVariables.isTame = boarIsTame;
             GameModeValueManager.GetCurrentGameModeValue().butlerBotVariables.isTame = butlerBotIsTame;
