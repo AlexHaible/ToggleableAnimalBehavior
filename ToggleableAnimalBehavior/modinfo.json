@@ -2,7 +2,7 @@
   "name": "Toggleable Animal Behavior",
   "author": "Sauravisus",
   "description": "Allows the users to set the behavior of all animals individually, as well as how often the shark attacks the raft, and if the seagulls attack crops.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "GNU AGPLv3",
   "icon": "icon.png",
   "banner": "banner.png",
