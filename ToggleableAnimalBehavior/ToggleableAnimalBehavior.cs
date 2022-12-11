@@ -29,6 +29,7 @@ namespace ToggleableAnimalBehavior {
         public static bool ratIsTame;
         public static bool utopiaBossIsTame;
         public static bool varunaBossIsTame;
+        public static bool TABdebugging;
         static bool started;
         static bool CanUnload
         {
@@ -71,6 +72,10 @@ namespace ToggleableAnimalBehavior {
         public override void WorldEvent_WorldLoaded()
         {
             CanUnload = false;
+            // Call the settings close function, so any variables set in the main menu
+            // will take effect in the newly loaded world without needing to open/close
+            // the mod options menu again.
+            ExtraSettingsAPI_SettingsClose();
         }
 
         public override void WorldEvent_WorldUnloaded()
@@ -98,6 +103,26 @@ namespace ToggleableAnimalBehavior {
             ratIsTame           = ExtraSettingsAPI_GetCheckboxState("ratIsTame");
             utopiaBossIsTame    = ExtraSettingsAPI_GetCheckboxState("utopiaBossIsTame");
             varunaBossIsTame    = ExtraSettingsAPI_GetCheckboxState("varunaBossIsTame");
+            TABdebugging        = ExtraSettingsAPI_GetCheckboxState("TABdebugging");
+
+            if(TABdebugging == true){
+                Log("--- Before saving creature aggression status variables ---");
+                Log("Shark is tame: " + GameModeValueManager.GetCurrentGameModeValue().sharkVariables.isTame);
+                Log("Shark attack rate multiplier: " + GameModeValueManager.GetCurrentGameModeValue().sharkVariables.attackRateMultiplier);
+                Log("Seagull is tame: " + GameModeValueManager.GetCurrentGameModeValue().seagullVariables.isTame);
+                Log("Seagull attacks crops: " + GameModeValueManager.GetCurrentGameModeValue().seagullVariables.attacksCrops);
+                Log("Screecher is tame: " + GameModeValueManager.GetCurrentGameModeValue().stonebirdVariables.isTame);
+                Log("Boar is tame: " + GameModeValueManager.GetCurrentGameModeValue().boarVariables.isTame);
+                Log("Butler Bot is tame: " + GameModeValueManager.GetCurrentGameModeValue().butlerBotVariables.isTame);
+                Log("Bear is tame: " + GameModeValueManager.GetCurrentGameModeValue().bearVariables.isTame);
+                Log("Anglerfish is tame: " + GameModeValueManager.GetCurrentGameModeValue().anglerFishVariables.isTame);
+                Log("Hyena is tame: " + GameModeValueManager.GetCurrentGameModeValue().hyenaVariables.isTame);
+                Log("Mudhog is tame: " + GameModeValueManager.GetCurrentGameModeValue().pigVariables.isTame);
+                Log("Pufferfish is tame: " + GameModeValueManager.GetCurrentGameModeValue().pufferfishVariables.isTame);
+                Log("Lurker is tame: " + GameModeValueManager.GetCurrentGameModeValue().ratVariables.isTame);
+                Log("Alpha is tame: " + GameModeValueManager.GetCurrentGameModeValue().utopiaBossVariables.isTame);
+                Log("Rhino Shark is tame: " + GameModeValueManager.GetCurrentGameModeValue().varunaBossVariables.isTame);
+            }
 
             GameModeValueManager.GetCurrentGameModeValue().sharkVariables.isTame = sharkIsTame;
             GameModeValueManager.GetCurrentGameModeValue().sharkVariables.attackRateMultiplier = sharkAtkMultiFloat;
@@ -114,6 +139,25 @@ namespace ToggleableAnimalBehavior {
             GameModeValueManager.GetCurrentGameModeValue().ratVariables.isTame = ratIsTame;
             GameModeValueManager.GetCurrentGameModeValue().utopiaBossVariables.isTame = utopiaBossIsTame;
             GameModeValueManager.GetCurrentGameModeValue().varunaBossVariables.isTame = varunaBossIsTame;
+
+            if(TABdebugging == true){
+                Log("--- After saving creature aggression status variables ---");
+                Log("Shark is tame: " + GameModeValueManager.GetCurrentGameModeValue().sharkVariables.isTame);
+                Log("Shark attack rate multiplier: " + GameModeValueManager.GetCurrentGameModeValue().sharkVariables.attackRateMultiplier);
+                Log("Seagull is tame: " + GameModeValueManager.GetCurrentGameModeValue().seagullVariables.isTame);
+                Log("Seagull attacks crops: " + GameModeValueManager.GetCurrentGameModeValue().seagullVariables.attacksCrops);
+                Log("Screecher is tame: " + GameModeValueManager.GetCurrentGameModeValue().stonebirdVariables.isTame);
+                Log("Boar is tame: " + GameModeValueManager.GetCurrentGameModeValue().boarVariables.isTame);
+                Log("Butler Bot is tame: " + GameModeValueManager.GetCurrentGameModeValue().butlerBotVariables.isTame);
+                Log("Bear is tame: " + GameModeValueManager.GetCurrentGameModeValue().bearVariables.isTame);
+                Log("Anglerfish is tame: " + GameModeValueManager.GetCurrentGameModeValue().anglerFishVariables.isTame);
+                Log("Hyena is tame: " + GameModeValueManager.GetCurrentGameModeValue().hyenaVariables.isTame);
+                Log("Mudhog is tame: " + GameModeValueManager.GetCurrentGameModeValue().pigVariables.isTame);
+                Log("Pufferfish is tame: " + GameModeValueManager.GetCurrentGameModeValue().pufferfishVariables.isTame);
+                Log("Lurker is tame: " + GameModeValueManager.GetCurrentGameModeValue().ratVariables.isTame);
+                Log("Alpha is tame: " + GameModeValueManager.GetCurrentGameModeValue().utopiaBossVariables.isTame);
+                Log("Rhino Shark is tame: " + GameModeValueManager.GetCurrentGameModeValue().varunaBossVariables.isTame);
+            }
         }
 
         public static bool ExtraSettingsAPI_GetCheckboxState(string name) => false;
